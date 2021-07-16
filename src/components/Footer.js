@@ -1,7 +1,9 @@
 import React from 'react';
-import logo from '../img/logo1.png';
-import '../App.css';
+import logo from '../img/logo1.png'
+import '../App.css'
 import { Link } from "react-router-dom";
+
+const SUB_DOMAIN = "/food"
 
 function Footer() {
     return (
@@ -13,17 +15,17 @@ function Footer() {
                     </div>
                     <div class="col-md-2">
                         <ul>
-                            <li className="py-2">
-                                <Link to="/">Home Page</Link>
+                        <li className="py-2">
+                                <Link to={`${SUB_DOMAIN}/`}>Home Page</Link>
                             </li>
                             <li className="py-2">
-                                <Link to="/Services">About Us</Link>
+                                <Link to={`${SUB_DOMAIN}/Services`}>About Us</Link>
                             </li>
                             <li className="py-2">
-                                <Link to="/Contact">Contact Us</Link>
+                                <Link to={`${SUB_DOMAIN}/Contact`}>Contact Us</Link>
                             </li>
                             <li className="py-2">
-                                <Link to="/Cart">Payment Process</Link>
+                                <Link to={`${SUB_DOMAIN}/Cart`}>Payment Process</Link>
                             </li>
                         </ul>
                     </div>
@@ -55,10 +57,8 @@ function Footer() {
                     <div class="col-md-3">
                         <p style={{ fontSize: '50px' }}>
                             <a href="https://www.facebook.com/" class="fab fa-facebook-square" style={{ marginRight: '100px' }}></a>
-                            <a href="https://www.instagram.com/" class="fab fa-instagram" style={{ marginRight: '170px' }}></a>
-                            <a href="#">
-                                <img style={{ width: '200px', height: '100px' }} alt="ĐÃ ĐĂNG KÝ BỘ CÔNG THƯƠNG" src="./images/Register.png"></img>
-                            </a>
+                            <a href="https://www.instagram.com/" class="fab fa-instagram" style={{ marginRight: '150px' }}></a>
+                            <img style={{ width: '200px', height: '100px' }} alt="ĐÃ ĐĂNG KÝ BỘ CÔNG THƯƠNG" src="./images/Register.png"></img>
                         </p>
                     </div>
                 </div>
@@ -66,4 +66,4 @@ function Footer() {
         </div>
     )
 }
-export default Footer;
+export default Footer

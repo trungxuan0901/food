@@ -16,10 +16,10 @@ const Email = () => {
                 paddingTop: "100px",
             }} >
             <form className="row" style={{ margin: "25px 85px 75px 100px" }} onSubmit={sendEmail}>
-                <input type="text" name="name" placeholder="FULL NAME" className="form-control" />
-                <input type="email" name="user_email" placeholder="EMAIL" className="form-control" />
-                <textarea name="message" rows="5" placeholder="COMMENTS ON SERVICES" className="form-control" />
-                <input style={{ height: "80px", fontSize: "36px", color: "#617D98" }} type="submit" value="SEND" className="form-control btn btn-dark" />
+                <input type="text" name="name" placeholder="FULL NAME" className="form-control" style={{marginLeft:"50px", marginRight:"103px",borderRadius:"1.25rem"}} />
+                <input type="email" name="user_email" placeholder="EMAIL" className="form-control" style={{marginLeft:"50px", marginRight:"103px",borderRadius:"1.25rem"}} />
+                <textarea name="message" rows="5" placeholder="COMMENTS ON SERVICES" className="form-control"style={{marginLeft:"50px", marginRight:"103px",borderRadius:"1.25rem"}}  />
+                <input style={{ height: "79px", fontSize: "36px", color: "#617D98", marginTop:"5px",marginLeft:"50px", marginRight:"103px",borderRadius:"1.25rem" }} type="submit" value="SEND" className="form-control btn btn-dark"  />
             </form>
         </div>
     )

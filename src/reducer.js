@@ -3,12 +3,15 @@ export const initialState = {
 }
 const reducer = (state, action) => {
     console.log(action)
-    switch (action.type) {
+    switch(action.type){
         case 'SET_LOGIN':
-            return {
+            return{
                 ...state,
-                loggedinuser: action.user
+                loggedinuser:action.user
             }
+            break
+        default:
+            break
     }
 }
-export default reducer;
+export default reducer

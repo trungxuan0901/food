@@ -1,6 +1,6 @@
 export const CartReducer = (state, action) => {
 
-    const { shoppingCart, totalPrice, qty } = state
+    const {shoppingCart, totalPrice, qty} = state
     let product
     let index
     let updatedPrice
@@ -9,39 +9,37 @@ export const CartReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_TO_CART':
             const check = shoppingCart.find(product => product.id === action.id)
-            if (check) {
+            if(check){
                 return state
-            } else {
+            }else{
                 product = action.product
                 product['qty'] = 1
                 updatedQty = qty + 1
                 updatedPrice = totalPrice + product.price
                 return {
-                    shoppingCart: [product, ...shoppingCart],
-                    totalPrice: updatedPrice,
+                    shoppingCart: [product, ...shoppingCart], 
+                    totalPrice: updatedPrice, 
                     qty: updatedQty
                 }
             }
             break;
-
         case 'INC':
             product = action.cart
             product.qty = product.qty + 1
             updatedPrice = totalPrice + product.price
-            updatedQty = qty + 1
+            updatedQty =   qty + 1
 
             index = shoppingCart.findIndex(cart => cart.id === action.id)
             shoppingCart[index] = product
             return {
-                shoppingCart: [...shoppingCart],
+                shoppingCart: [...shoppingCart], 
                 totalPrice: updatedPrice,
                 qty: updatedQty
             }
             break
-
         case 'DEC':
             product = action.cart
-            if (product.qty > 1) {
+            if(product.qty > 1){
                 product.qty = product.qty - 1
                 console.log(product.qty)
                 updatedPrice = totalPrice - product.price
@@ -49,12 +47,12 @@ export const CartReducer = (state, action) => {
                 index = shoppingCart.findIndex(cart => cart.id === action.id)
                 shoppingCart[index] = product
                 return {
-                    shoppingCart: [...shoppingCart],
+                    shoppingCart: [...shoppingCart], 
                     totalPrice: updatedPrice,
                     qty: updatedQty
                 }
             }
-            else {
+            else{
                 return state
             }
             break
@@ -63,10 +61,10 @@ export const CartReducer = (state, action) => {
             product = action.cart
             updatedQty = qty - product.qty
             updatedPrice = totalPrice - product.price * product.qty
-            return { shoppingCart: [...filtered], totalPrice: updatedPrice, qty: updatedQty }
+            return {shoppingCart: [...filtered], totalPrice: updatedPrice, qty:updatedQty}
             break
-
         default:
-            return state;
+        return state;
     }
 }
+

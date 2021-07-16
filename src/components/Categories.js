@@ -13,10 +13,9 @@ const Categories = ({ categories, filterItems }) => {
           >
             {category}
           </button>
-        );
+        )
       })}
     </div>
-  );
-};
-
+  )
+}
 export default Categories;

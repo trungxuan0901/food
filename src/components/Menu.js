@@ -12,15 +12,15 @@ const Menu = ({ items }) => {
               <div>
                 <h4>{title}</h4>
                 <p>
-                  <div>
-                    {
-                      Array(rating)
-                        .fill()
-                        .map((_) => (
-                          <i className="fa fa-star text-warning" />
-                        ))
-                    }
-                  </div>
+                <div>
+                        {
+                            Array(rating)
+                            .fill()
+                            .map((_)=>(
+                                <i className="fa fa-star text-warning" />
+                            ))
+                        }
+                </div>
                 </p>
                 <h4 className='price'>${price}</h4>
               </div>
@@ -32,5 +32,4 @@ const Menu = ({ items }) => {
     </div>
   );
 };
-
 export default Menu;

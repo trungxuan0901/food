@@ -1,11 +1,10 @@
 import React from 'react';
-import '../App.css';
 import Email from './Email';
 
 class Contact extends React.Component {
     render() {
         return (
-            <div className="fluid-container">
+            <div className="container-fluid">
                 <div style={{
                     backgroundImage: `url("./images/Bgcontact.jpg")`,
                     backgroundPosition: "center",
@@ -13,7 +12,7 @@ class Contact extends React.Component {
                 }} className="row">
                     <div className="col-sm-4">
                         <div className="my-5">
-                            <h3 className="text-center">CONTACT US</h3>
+                            <h3 className="text-center text-warning">CONTACT US</h3>
                             <p className="text-center text-secondary" style={{ fontSize: '14px' }}>To receive great deals</p>
                         </div>
                         <div className="text-center">
